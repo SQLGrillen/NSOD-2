@@ -1,0 +1,17 @@
+USE [WideWorldImportersDW]
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[GetHashID]    Script Date: 3/10/2021 10:51:22 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE FUNCTION [dbo].[GetHashID](@TextString NVARCHAR(4000))
+RETURNS NVARCHAR(50) AS
+BEGIN 
+   RETURN CONVERT(NVARCHAR(50),HASHBYTES('SHA2_256', @TextString),2)
+END
+GO
+
