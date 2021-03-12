@@ -1,0 +1,1 @@
+# https://github.com/cviorel/Presentations/tree/main/2021/new_stars_of_data
